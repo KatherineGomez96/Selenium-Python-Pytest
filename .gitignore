@@ -1,0 +1,3 @@
+TestEnv/
+*.pyc
+__pycache__/
