@@ -4,12 +4,8 @@ Este repositorio es donde practico mis pruebas automatizadas utilizando Selenium
 
 ## Tecnologías utilizadas
 
-- **Selenium**: Framework de automatización de navegadores.
+- **Selenium WebDriver**: Framework de automatización de navegadores.
 - **pytest**: Framework de pruebas para ejecutar y organizar las pruebas automatizadas.
-
-## Estructura del repositorio
-
-- `test_pruebainicial.py`: Un ejemplo de prueba básica con Selenium y pytest.
   
 ## Cómo ejecutar las pruebas
 
