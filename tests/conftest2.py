@@ -1,14 +1,36 @@
 import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
+from selenium.webdriver.chrome.service import Service as ChromrService
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.edge.service import Service as EdgeService
 from pages.sandbox_page2 import SandboxPage
+
+def pytest_addoption(parser):
+    parser.addoption("--browser", action="store", default="chrome", help="Type of browser: chrome, firefox, edge, safari")
+
 
 
 @pytest.fixture(scope="session")
-def browser():
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
+def browser(request):
+    browser_type = request.config.getoption("--browser").lower()
+    if browser_type == "chrome":
+        service = ChromrService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service)
+    elif browser_type == "firefox":
+        service = FirefoxService(GeckoDriverManager().install())
+        driver = webdriver.Firefox(service=service)
+    elif browser_type == "edge":
+        service = EdgeService(EdgeChromiumDriverManager().install())
+        driver = webdriver.Edge(service=service)
+    elif browser_type == "safari":
+        driver = webdriver.Safari()
+    else:
+        raise ValueError(f"Browser {browser_type} is not supported")
+
     yield driver
     driver.quit()
 
@@ -16,3 +38,4 @@ def browser():
 @pytest.fixture
 def sandbox_page(browser):
     return SandboxPage(browser)
+
