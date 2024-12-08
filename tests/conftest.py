@@ -7,7 +7,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.chrome.service import Service as ChromrService
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.edge.service import Service as EdgeService
-from pages.sandbox_page2 import SandboxPage
+from pages.sandbox_page import SandboxPage
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome", help="Type of browser: chrome, firefox, edge, safari")

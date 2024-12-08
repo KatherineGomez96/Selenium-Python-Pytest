@@ -58,8 +58,7 @@ def test_elegir_deporte_del_dropdown(sandbox_page):
     sandbox_page.navigate_sandbox()
     sandbox_page.select_deporte("Futbol")
 
-@pytest.mark.sandbox
-@pytest.mark.regresion
+
 def test_deporte_dropdown_options(sandbox_page):
     sandbox_page.navigate_sandbox()
     option = sandbox_page.get_deporte_dropdown_options()
@@ -90,6 +89,8 @@ def test_valor_celda_cambia_post_recarga(sandbox_page):
         valor_inicial != valor_post_recarga
     ), f"El valor de la celda no cambio despues de la recarga; aún es '{valor_inicial}'."
 
+@pytest.mark.sandbox
+#@pytest.mark.regresion
 def test_valor_celda_no_cambia_post_recarga(sandbox_page):
     sandbox_page.navigate_sandbox()
     valor_inicial = sandbox_page.get_valor_celda_estatica(2, 3)
