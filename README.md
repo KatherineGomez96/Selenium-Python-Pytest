@@ -1,15 +1,29 @@
-# Selenium Tests
+# Selenium Tests 🌐
 
-Este repositorio es donde practico mis pruebas automatizadas utilizando Selenium y pytest. Aquí encontrarás diferentes scripts de prueba que interactúan con sitios web reales y validan su funcionalidad utilizando la combinación de Selenium para la automatización del navegador y pytest para la ejecución y validación de las pruebas.
+Bienvenido a mi repositorio de prácticas de **Pruebas Automatizadas** con **Selenium** y **pytest**. Este proyecto refleja mi experiencia en el diseño y ejecución de pruebas para garantizar la calidad y funcionalidad de sitios web. ¡Es un paso más en mi camino hacia convertirme en una experta en **QA Automation**!
 
-## Tecnologías utilizadas
+---
 
-- **Selenium WebDriver**: Framework de automatización de navegadores.
-- **pytest**: Framework de pruebas para ejecutar y organizar las pruebas automatizadas.
-  
-## Cómo ejecutar las pruebas
+## 🛠️ Tecnologías Utilizadas
 
-1. Clona este repositorio a tu máquina local:
-   ```bash
-   git clone https://github.com/KatherineGomez96/Selenium-Python-Pytest.git
+- **Selenium WebDriver**: Automación de navegadores web para simular interacciones reales.
+- **pytest**: Framework eficiente para ejecutar y organizar pruebas automatizadas.
+- **Python**: Lenguaje base para crear scripts claros y efectivos.
 
+---
+
+## 🎯 Objetivo del Proyecto
+
+Este repositorio está diseñado para:
+1. **Demostrar mi capacidad técnica** al crear pruebas de frontend efectivas.
+2. **Explorar casos de prueba reales**, incluyendo validación de formularios, flujos de usuario y verificación de elementos dinámicos.
+3. **Destacar mis habilidades en automatización**, aplicando buenas prácticas de programación y diseño de pruebas.
+
+---
+
+## 🚀 Cómo Ejecutar las Pruebas
+
+### 1️⃣ Clona el Repositorio
+```bash
+git clone https://github.com/KatherineGomez96/Selenium-Python-Pytest.git
+cd Selenium-Python-Pytest

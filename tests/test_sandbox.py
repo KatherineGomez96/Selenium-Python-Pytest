@@ -221,3 +221,9 @@ def test_valor_celda_no_cambia_post_recarga(sandbox_page):
         assert (
             valor_inicial == valor_post_recarga
         ), f"El valor de la celda cambió después de la recarga; aún es '{valor_inicial}'."
+
+
+#comandos:
+#allure serve allure-result (para generar el reporte)
+#pytest test_sandbox.py  --browser edge --alluredir allure-result (implementacion de la prueba)
+# pytest test_sandbox.py  --browser chrome --alluredir allure-result
